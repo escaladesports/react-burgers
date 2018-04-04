@@ -31,7 +31,7 @@ class Base extends React.Component{
 		return (
 			<div role='button' className={`Burger ${active ? 'BurgerActive' : ''}`} onClick={onClick}>
 				<div className='BurgerInner' />
-				<style>{`
+				<style dangerouslySetInnerHTML={{ __html: `
 					.Burger{
 						cursor: pointer;
 						width: ${width}px;
@@ -74,7 +74,7 @@ class Base extends React.Component{
 					}
 
 					${css}
-				`}</style>
+				`}} />
 			</div>
 		)
 	}
