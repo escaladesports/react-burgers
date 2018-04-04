@@ -1,79 +1,74 @@
 import React from 'react'
 
-export default class extends React.Component {
-	constructor(props){
-		super(props)
-		this.state = { loading: false }
-		this.hideLoader = this.hideLoader.bind(this)
-		this.showLoader = this.showLoader.bind(this)
-		this.startTimeout = this.startTimeout.bind(this)
-	}
-	componentWillReceiveProps() {
-		this.startTimeout()
-	}
-	componentDidMount() {
-		if (this.img.complete) {
-			this.hideLoader()
-		}
-		else {
-			this.startTimeout()
-		}
-	}
-	startTimeout() {
-		clearTimeout(this.timeout)
-		this.timeout = setTimeout(this.showLoader, 100)
-	}
-	showLoader() {
-		if (!this.img.complete) {
-			this.setState({ loading: true })
-		}
-	}
-	hideLoader() {
-		clearTimeout(this.timeout)
-		this.setState({ loading: false })
-	}
+class Burgers extends React.Component{
 	render(){
-		const TagName = this.props.tagName || 'img'
+		const {
+			width,
+			height,
+			color,
+			lineHeight,
+			hoverColor,
+			activeColor,
+			activeHoverColor,
+			active,
+			onClick,
+		} = this.props
+
+		const halfHeight = height / 2
+		const halfLineHeight = lineHeight / 2
+		const curColor = active ? activeColor : color
+		const curHoverColor = active ? activeHoverColor : hoverColor
+
 		return (
-			<div style={{
-				maxWidth: this.props.width,
-				maxHeight: this.props.height,
-				margin: this.props.center ? 'auto' : ''
-			}}>
-				<div style={{
-					position: 'relative',
-					paddingBottom: `${(this.props.height / this.props.width) * 100}%`
-				}}>
-					<TagName
-						type={this.props.type}
-						srcSet={this.props.srcSet}
-						sizes={this.props.sizes}
-						src={this.props.src}
-						ref={img => this.img = img}
-						onLoad={this.hideLoader}
-						onError={this.hideLoader}
-						alt={this.props.alt}
-						style={{
-							position: 'absolute',
-							width: '100%',
-							maxWidth: '100%',
-							top: 0,
-							left: 0,
-							display: this.state.loading ? 'none' : 'block'
-						}}
-					/>
-					{this.state.loading && this.props.loading &&
-						<div style={{
-								position: 'absolute',
-								top: '50%',
-								left: '50%',
-								transform: 'translate(-50%, -50%)'
-						}}>
-							{this.props.loading}
-						</div>
+			<div role='button' className='Burger' onClick={onClick}>
+				<div className='BurgerInner' />
+				<style>{`
+					.Burger{
+						cursor: pointer;
+						width: ${width}px;
+						height: ${height}px;
+						position: relative;
+						display: inline-block;
 					}
-				</div>
+					.BurgerInner:after, .BurgerInner:before{
+						content: '';
+						display: block;
+					}
+					.BurgerInner, .BurgerInner:after, .BurgerInner:before{
+						position: absolute;
+						width: 100%;
+						background-color: ${curColor};
+						height: ${lineHeight}px;
+					}
+					.BurgerInner{
+						top: 50%;
+						margin-top: -${halfLineHeight}px;
+					}
+					.BurgerInner:before{
+						top: -${halfHeight - halfLineHeight}px;
+					}
+					.BurgerInner:after{
+						top: ${halfHeight - halfLineHeight}px;
+					}
+					.Burger:hover .BurgerInner,
+					.Burger:hover .BurgerInner:before,
+					.Burger:hover .BurgerInner:after{
+						background-color: ${curHoverColor}
+					}
+				`}</style>
 			</div>
 		)
 	}
 }
+
+Burgers.defaultProps = {
+	width: 40,
+	height: 24,
+	lineHeight: 4,
+	color: '#000',
+	hoverColor: '#666',
+	activeColor: '#999',
+	activeHoverColor: '#000',
+}
+
+export default Burgers
