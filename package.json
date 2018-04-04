@@ -14,18 +14,20 @@
   "license": "MIT",
   "scripts": {
     "analyze": "esca-scripts analyze --react --component --input ./src/index.js",
-    "build": "esca-scripts build --react --component --babel --input src --output dist --multiple",
-    "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --react --browser",
+    "build": "esca-scripts build --react --component --babel --input src --output dist --multiple --styledJsx",
+    "dev": "esca-scripts dev ---input './dev/dev.js, ./dev/index.html' --react --browser --styledJsx",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "echo 'no test'",
     "travis": "opn https://travis-ci.org/escaladesports/react-burgers/branches"
   },
   "devDependencies": {
-    "esca-scripts": "^0.14.4",
+    "esca-scripts": "^0.14.7",
     "opn-cli": "^3.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "styled-jsx": "^2.2.6"
+  }
 }

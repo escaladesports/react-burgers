@@ -1,5 +1,7 @@
-import base from './base'
+import Base from './base'
+import Slider from './slider'
 
 export {
-	base,
+	Base,
+	Slider
 }

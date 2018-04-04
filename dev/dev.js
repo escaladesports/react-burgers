@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import Burger from '../src/slider'
+import Slider from '../src/index'
 
 const containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
@@ -12,7 +12,7 @@ class BurgerToggle extends React.Component{
 	}
 	render(){
 		return(
-			<Burger
+			<Slider
 				active={this.state.active}
 				onClick={() => this.setState({ active: !this.state.active })}
 				borderRadius='4'

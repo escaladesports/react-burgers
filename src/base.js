@@ -15,7 +15,7 @@ class Base extends React.Component{
 			onClick,
 			borderRadius,
 			lineSpacing,
-			css,
+			styles,
 		} = this.props
 
 		if (!activeColor) activeColor = color
@@ -31,7 +31,7 @@ class Base extends React.Component{
 		return (
 			<div role='button' className={`Burger ${active ? 'BurgerActive' : ''}`} onClick={onClick}>
 				<div className='BurgerInner' />
-				<style dangerouslySetInnerHTML={{ __html: `
+				<style jsx global>{`
 					.Burger{
 						cursor: pointer;
 						width: ${width}px;
@@ -39,10 +39,13 @@ class Base extends React.Component{
 						position: relative;
 						display: inline-block;
 					}
-					.BurgerInner:before,
-					.BurgerInner:after{
-						content: '';
-						display: block;
+					.BurgerInner{
+						top: 50%;
+						margin-top: -${halfLineHeight}px;
+						&:before, &:after{
+							content: '';
+							display: block;
+						}
 					}
 					.BurgerInner,
 					.BurgerInner:before,
@@ -56,10 +59,6 @@ class Base extends React.Component{
 						transition-duration: 0.15s;
 						transition-timing-function: ease;
 					}
-					.BurgerInner{
-						top: 50%;
-						margin-top: -${halfLineHeight}px;
-					}
 					.BurgerInner:before{
 						top: -${halfHeight - halfLineHeight}px;
 					}
@@ -72,9 +71,8 @@ class Base extends React.Component{
 					.Burger:hover .BurgerInner:after{
 						background-color: ${curHoverColor}
 					}
-
-					${css}
-				`}} />
+				`}</style>
+				<style jsx global>{styles}</style>
 			</div>
 		)
 	}

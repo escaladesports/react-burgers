@@ -14,7 +14,7 @@ class Slider extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base {...this.props} css={`
+			<Base {...this.props} styles={`
 				.BurgerInner{
 					top: ${lineHeight / 2}px;
 				}
