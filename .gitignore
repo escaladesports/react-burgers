@@ -1,0 +1,30 @@
+# System generated files
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Dependency directories
+node_modules/
+
+# Development/Environment
+.env
+dist
+.next
+json
+static
+docs/build/
+dist-es6/
+dist-es5/
+dist-modules/
+coverage/
+.eslintcache
+.postcssrc
+webpack.config.js
+.babelrc
+
+# Temporary
+temp
+temp-*
