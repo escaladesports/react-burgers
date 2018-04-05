@@ -9,6 +9,7 @@ import Minus from './minus'
 import Slider from './slider'
 import Spin from './spin'
 import Spring from './spring'
+import Squeeze from './squeeze'
 
 export {
 	Arrow,
@@ -22,4 +23,5 @@ export {
 	Slider,
 	Spin,
 	Spring,
+	Squeeze,
 }

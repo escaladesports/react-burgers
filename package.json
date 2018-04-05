@@ -3,7 +3,13 @@
   "version": "0.0.0",
   "keywords": [
     "react",
-    "burgers"
+	 "burgers",
+	 "hamburger",
+	 "menu",
+	 "nav",
+	 "navigation",
+	 "animated",
+	 "css"
   ],
   "main": "dist/index.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",
