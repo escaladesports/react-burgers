@@ -17,6 +17,7 @@ class Elastic extends React.Component{
 				<Base {...this.props} />
 				<style jsx global>{`
 					.BurgerElastic {
+						display: inline-block;
 						.BurgerInner {
 							top: ${lineHeight / 2}px;
 							transition-duration: 0.275s;

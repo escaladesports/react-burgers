@@ -15,6 +15,9 @@ class Base extends React.Component{
 			onClick,
 			borderRadius,
 			lineSpacing,
+			padding,
+			className,
+			children,
 		} = this.props
 
 		if (!activeColor) activeColor = color
@@ -22,29 +25,40 @@ class Base extends React.Component{
 		if (!activeHoverColor) activeHoverColor = hoverColor
 
 		const height = lineSpacing * 2 + lineHeight * 3
-		const curColor = active ? activeColor : color
-		const curHoverColor = active ? activeHoverColor : hoverColor
+
+		const classes = ['BurgerOuter']
+		if(active) classes.push('BurgerActive')
+		if(className) classes.push(className)
 
 		return (
-			<div role='button' className={`Burger ${active ? 'BurgerActive' : ''}`} onClick={onClick}>
-				<div className='BurgerInner' />
+			<div role='button' className='Burger' onClick={onClick}>
+				<div className={classes.join(' ')}>
+					<div className='BurgerInner' />
+				</div>
+				{children}
 				<style jsx global>{`
 					.Burger{
-						cursor: pointer;
-						width: ${width}px;
-						height: ${height}px;
-						position: relative;
+						padding: ${padding};
 						display: inline-block;
+						cursor: pointer;
 
 						&:hover{
 							.BurgerInner{
 								&,
 								&:before,
 								&:after{
-									background-color: ${curHoverColor}
+									background-color: ${hoverColor}
 								}
 							}
 						}
+					}
+
+					.BurgerOuter{
+						width: ${width}px;
+						height: ${height}px;
+						display: inline-block;
+						position: relative;
+						overflow: visible;
 					}
 
 					.BurgerInner{
@@ -62,7 +76,7 @@ class Base extends React.Component{
 						&:after{
 							position: absolute;
 							width: 100%;
-							background-color: ${curColor};
+							background-color: ${color};
 							height: ${lineHeight}px;
 							border-radius: ${borderRadius}px;
 							transition-property: transform;
@@ -76,6 +90,25 @@ class Base extends React.Component{
 
 						&:after{
 							bottom: ${(lineSpacing + lineHeight) * -1}px;
+						}
+					}
+
+					.BurgerActive{
+						.BurgerInner{
+							&,
+							&:before,
+							&:after{
+								background-color: ${activeColor};
+							}
+						}
+						&:hover{
+							.BurgerInner{
+								&,
+								&:before,
+								&:after{
+									background-color: ${activeHoverColor}
+								}
+							}
 						}
 					}
 				`}</style>

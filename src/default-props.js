@@ -5,4 +5,5 @@ export default {
 	color: '#000',
 	borderRadius: 0,
 	active: false,
+	padding: '15px',
 }

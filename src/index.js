@@ -4,6 +4,7 @@ import ArrowTurn from './arrow-turn'
 import Boring from './boring'
 import Collapse from './collapse'
 import Elastic from './elastic'
+import Emphatic from './emphatic'
 import Slider from './slider'
 
 export {
@@ -13,5 +14,6 @@ export {
 	Boring,
 	Collapse,
 	Elastic,
+	Emphatic,
 	Slider,
 }

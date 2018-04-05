@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Elastic as Burger } from '../src/index'
+import { Emphatic as Burger } from '../src/index'
 
 const containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
@@ -8,7 +8,9 @@ document.body.appendChild(containerEl)
 class BurgerToggle extends React.Component{
 	constructor(props){
 		super(props)
-		this.state = {}
+		this.state = {
+			active: false
+		}
 	}
 	render(){
 		return(
