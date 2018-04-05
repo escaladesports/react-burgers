@@ -26,13 +26,13 @@ class Base extends React.Component{
 
 		const height = lineSpacing * 2 + lineHeight * 3
 
-		const classes = ['BurgerOuter']
+		const classes = ['Burger']
 		if(active) classes.push('BurgerActive')
 		if(className) classes.push(className)
 
 		return (
-			<div role='button' className='Burger' onClick={onClick}>
-				<div className={classes.join(' ')}>
+			<button className={classes.join(' ')} onClick={onClick}>
+				<div className='BurgerBox'>
 					<div className='BurgerInner' />
 				</div>
 				{children}
@@ -41,6 +41,15 @@ class Base extends React.Component{
 						padding: ${padding};
 						display: inline-block;
 						cursor: pointer;
+
+						font: inherit;
+						color: inherit;
+						text-transform: none;
+						background-color: transparent;
+						border: 0;
+						margin: 0;
+						overflow: visible;
+						outline: 0;
 
 						&:hover{
 							.BurgerInner{
@@ -53,12 +62,11 @@ class Base extends React.Component{
 						}
 					}
 
-					.BurgerOuter{
+					.BurgerBox{
 						width: ${width}px;
 						height: ${height}px;
 						display: inline-block;
 						position: relative;
-						overflow: visible;
 					}
 
 					.BurgerInner{
@@ -112,7 +120,7 @@ class Base extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</button>
 		)
 	}
 }
