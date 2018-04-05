@@ -1,4 +1,5 @@
 import Arrow from './arrow'
+import ArrowReverse from './arrow-reverse'
 import ArrowAlt from './arrow-alt'
 import ArrowTurn from './arrow-turn'
 import Boring from './boring'
@@ -15,6 +16,7 @@ import Vortex from './vortex'
 
 export {
 	Arrow,
+	ArrowReverse,
 	ArrowAlt,
 	ArrowTurn,
 	Boring,
