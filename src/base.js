@@ -15,7 +15,6 @@ class Base extends React.Component{
 			onClick,
 			borderRadius,
 			lineSpacing,
-			styles,
 		} = this.props
 
 		if (!activeColor) activeColor = color
@@ -23,8 +22,6 @@ class Base extends React.Component{
 		if (!activeHoverColor) activeHoverColor = hoverColor
 
 		const height = lineSpacing * 2 + lineHeight * 3
-		const halfHeight = height / 2
-		const halfLineHeight = lineHeight / 2
 		const curColor = active ? activeColor : color
 		const curHoverColor = active ? activeHoverColor : hoverColor
 
@@ -38,41 +35,50 @@ class Base extends React.Component{
 						height: ${height}px;
 						position: relative;
 						display: inline-block;
+
+						&:hover{
+							.BurgerInner{
+								&,
+								&:before,
+								&:after{
+									background-color: ${curHoverColor}
+								}
+							}
+						}
 					}
+
 					.BurgerInner{
 						top: 50%;
-						margin-top: -${halfLineHeight}px;
-						&:before, &:after{
+						margin-top: ${(lineHeight / 2) * -1}px;
+
+						&:before,
+						&:after{
 							content: '';
 							display: block;
 						}
-					}
-					.BurgerInner,
-					.BurgerInner:before,
-					.BurgerInner:after{
-						position: absolute;
-						width: 100%;
-						background-color: ${curColor};
-						height: ${lineHeight}px;
-						border-radius: ${borderRadius}px;
-						transition-property: transform;
-						transition-duration: 0.15s;
-						transition-timing-function: ease;
-					}
-					.BurgerInner:before{
-						top: -${halfHeight - halfLineHeight}px;
-					}
-					.BurgerInner:after{
-						top: ${halfHeight - halfLineHeight}px;
-					}
 
-					.Burger:hover .BurgerInner,
-					.Burger:hover .BurgerInner:before,
-					.Burger:hover .BurgerInner:after{
-						background-color: ${curHoverColor}
+						&,
+						&:before,
+						&:after{
+							position: absolute;
+							width: 100%;
+							background-color: ${curColor};
+							height: ${lineHeight}px;
+							border-radius: ${borderRadius}px;
+							transition-property: transform;
+							transition-duration: 0.15s;
+							transition-timing-function: ease;
+						}
+
+						&:before{
+							top: ${(lineSpacing + lineHeight) * -1}px;
+						}
+
+						&:after{
+							bottom: ${(lineSpacing + lineHeight) * -1}px;
+						}
 					}
 				`}</style>
-				<style jsx global>{styles}</style>
 			</div>
 		)
 	}
