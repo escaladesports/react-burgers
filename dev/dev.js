@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Elastic as Burger } from '../src/index'
+import { Minus as Burger } from '../src/index'
 
 const containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
