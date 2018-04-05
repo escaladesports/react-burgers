@@ -5,14 +5,6 @@ import defaultProps from './default-props'
 
 class Spin extends React.Component{
 	render(){
-		let {
-			lineHeight,
-			lineSpacing,
-			width,
-		} = this.props
-
-		let yOffset = lineSpacing + lineHeight
-
 		return (
 			<Base className='BurgerSpin' {...this.props}>
 				<style jsx global>{`
@@ -21,12 +13,12 @@ class Spin extends React.Component{
 							transition-duration: 0.22s;
 							transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
 
-							&::before {
+							&:before {
 								transition: top 0.1s 0.25s ease-in,
 												opacity 0.1s ease-in;
 							}
 
-							&::after {
+							&:after {
 								transition: bottom 0.1s 0.25s ease-in,
 												transform 0.22s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 							}
@@ -38,14 +30,14 @@ class Spin extends React.Component{
 								transition-delay: 0.12s;
 								transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
-								&::before {
+								&:before {
 									top: 0;
 									opacity: 0;
 									transition: top 0.1s ease-out,
 													opacity 0.1s 0.12s ease-out;
 								}
 
-								&::after {
+								&:after {
 									bottom: 0;
 									transform: rotate(-90deg);
 									transition: bottom 0.1s ease-out,

@@ -8,6 +8,7 @@ import Emphatic from './emphatic'
 import Minus from './minus'
 import Slider from './slider'
 import Spin from './spin'
+import Spring from './spring'
 
 export {
 	Arrow,
@@ -20,4 +21,5 @@ export {
 	Minus,
 	Slider,
 	Spin,
+	Spring,
 }
