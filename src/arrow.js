@@ -6,14 +6,11 @@ import defaultProps from './default-props'
 class Arrow extends React.Component{
 	render(){
 		let { width } = this.props
-
 		return (
-			<div className='BurgerArrow'>
-				<Base {...this.props} />
+			<Base className='BurgerArrow' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrow{
-						display: inline-block;
-						.BurgerActive{
+						&.BurgerActive{
 							.BurgerInner{
 								&:before{
 									transform: translate3d(${width * -0.2}px, 0, 0) rotate(-45deg) scale(0.7, 1);
@@ -25,7 +22,7 @@ class Arrow extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }

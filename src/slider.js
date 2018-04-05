@@ -14,8 +14,7 @@ class Slider extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<div className='BurgerSlider'>
-				<Base {...this.props} />
+			<Base className='BurgerSlider' {...this.props}>
 				<style jsx global>{`
 					.BurgerSlider{
 						display: inline-block;
@@ -35,7 +34,7 @@ class Slider extends React.Component{
 							}
 						}
 
-						.BurgerActive{
+						&.BurgerActive{
 							.BurgerInner{
 								transform: translate3d(0, ${yOffset}px, 0) rotate(45deg);
 
@@ -52,7 +51,7 @@ class Slider extends React.Component{
 					}
 
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }

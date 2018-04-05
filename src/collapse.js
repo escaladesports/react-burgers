@@ -11,12 +11,9 @@ class Collapse extends React.Component{
 		} = this.props
 
 		return (
-			<div className='BurgerCollapse'>
-				<Base {...this.props} />
+			<Base className='BurgerCollapse' {...this.props}>
 				<style jsx global>{`
 					.BurgerCollapse{
-						display: inline-block;
-
 						.BurgerInner {
 							top: auto;
 							bottom: 0;
@@ -36,7 +33,7 @@ class Collapse extends React.Component{
 							}
 						}
 
-						.BurgerActive {
+						&.BurgerActive {
 							.BurgerInner {
 								transform: translate3d(0, ${(lineSpacing + lineHeight) * -1}px, 0) rotate(-45deg);
 								transition-delay: 0.22s;
@@ -59,7 +56,7 @@ class Collapse extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }

@@ -1,16 +1,11 @@
 import React from 'react'
 
-import defaultProps from './default-props'
-
 class Base extends React.Component{
 	render(){
 		let {
 			width,
 			lineHeight,
 			color,
-			hoverColor,
-			activeColor,
-			activeHoverColor,
 			active,
 			onClick,
 			borderRadius,
@@ -19,10 +14,6 @@ class Base extends React.Component{
 			className,
 			children,
 		} = this.props
-
-		if (!activeColor) activeColor = color
-		if (!hoverColor) hoverColor = color
-		if (!activeHoverColor) activeHoverColor = hoverColor
 
 		const height = lineSpacing * 2 + lineHeight * 3
 
@@ -41,7 +32,6 @@ class Base extends React.Component{
 						padding: ${padding};
 						display: inline-block;
 						cursor: pointer;
-
 						font: inherit;
 						color: inherit;
 						text-transform: none;
@@ -50,16 +40,6 @@ class Base extends React.Component{
 						margin: 0;
 						overflow: visible;
 						outline: 0;
-
-						&:hover{
-							.BurgerInner{
-								&,
-								&:before,
-								&:after{
-									background-color: ${hoverColor}
-								}
-							}
-						}
 					}
 
 					.BurgerBox{
@@ -100,31 +80,10 @@ class Base extends React.Component{
 							bottom: ${(lineSpacing + lineHeight) * -1}px;
 						}
 					}
-
-					.BurgerActive{
-						.BurgerInner{
-							&,
-							&:before,
-							&:after{
-								background-color: ${activeColor};
-							}
-						}
-						&:hover{
-							.BurgerInner{
-								&,
-								&:before,
-								&:after{
-									background-color: ${activeHoverColor}
-								}
-							}
-						}
-					}
 				`}</style>
 			</button>
 		)
 	}
 }
-
-Base.defaultProps = defaultProps
 
 export default Base

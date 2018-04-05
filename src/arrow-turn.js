@@ -6,13 +6,10 @@ import defaultProps from './default-props'
 class ArrowTurn extends React.Component{
 	render(){
 		return (
-			<div className='BurgerArrowTurn'>
-				<Base {...this.props} />
+			<Base className='BurgerArrowTurn' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrowTurn{
-						display: inline-block;
-
-						.BurgerActive{
+						&.BurgerActive{
 							.BurgerInner {
 								transform: rotate(-180deg);
 
@@ -27,7 +24,7 @@ class ArrowTurn extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }

@@ -6,11 +6,9 @@ import defaultProps from './default-props'
 class Boring extends React.Component{
 	render(){
 		return (
-			<div className='BurgerBoring'>
-				<Base {...this.props} />
+			<Base className='BurgerBoring' {...this.props}>
 				<style jsx global>{`
 					.BurgerBoring{
-						display: inline-block;
 						.BurgerInner {
 							&,
 							&:before,
@@ -19,7 +17,7 @@ class Boring extends React.Component{
 							}
 						}
 
-						.BurgerActive {
+						&.BurgerActive {
 							.BurgerInner {
 								transform: rotate(45deg);
 
@@ -36,7 +34,7 @@ class Boring extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }

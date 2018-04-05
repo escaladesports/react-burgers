@@ -13,11 +13,9 @@ class Elastic extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<div className='BurgerElastic'>
-				<Base {...this.props} />
+			<Base className='BurgerElastic' {...this.props}>
 				<style jsx global>{`
 					.BurgerElastic {
-						display: inline-block;
 						.BurgerInner {
 							top: ${lineHeight / 2}px;
 							transition-duration: 0.275s;
@@ -34,7 +32,7 @@ class Elastic extends React.Component{
 							}
 						}
 
-						.BurgerActive {
+						&.BurgerActive {
 							.BurgerInner {
 
 								transform: translate3d(0, ${yOffset}px, 0) rotate(135deg);
@@ -53,7 +51,7 @@ class Elastic extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }

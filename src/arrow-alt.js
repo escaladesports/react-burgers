@@ -5,16 +5,12 @@ import defaultProps from './default-props'
 
 class ArrowAlt extends React.Component{
 	render(){
-		let {
-			width,
-		} = this.props
+		let { width } = this.props
 
 		return (
-			<div className='BurgerArrowAlt'>
-				<Base {...this.props} />
+			<Base className='BurgerArrowAlt' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrowAlt{
-						display: inline-block;
 
 						.BurgerInner {
 							&:before {
@@ -28,7 +24,7 @@ class ArrowAlt extends React.Component{
 							}
 						}
 
-						.BurgerActive {
+						&.BurgerActive {
 							.BurgerInner {
 								&:before {
 									top: 0;
@@ -47,7 +43,7 @@ class ArrowAlt extends React.Component{
 						}
 					}
 				`}</style>
-			</div>
+			</Base>
 		)
 	}
 }
