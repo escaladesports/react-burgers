@@ -7,6 +7,7 @@ import Elastic from './elastic'
 import Emphatic from './emphatic'
 import Minus from './minus'
 import Slider from './slider'
+import Spin from './spin'
 
 export {
 	Arrow,
@@ -18,4 +19,5 @@ export {
 	Emphatic,
 	Minus,
 	Slider,
+	Spin,
 }

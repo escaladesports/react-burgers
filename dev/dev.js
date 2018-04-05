@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { Minus as Burger } from '../src/index'
+import { Spin as Burger } from '../src/index'
 
 const containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
