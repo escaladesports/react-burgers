@@ -11,15 +11,16 @@ class ArrowTurn extends React.Component{
 				<style jsx global>{`
 					.BurgerArrowTurn{
 						display: inline-block;
-						& .BurgerActive{
+
+						.BurgerActive{
 							.BurgerInner {
 								transform: rotate(-180deg);
 
-								&::before {
+								&:before {
 									transform: translate3d(8px, 0, 0) rotate(45deg) scale(0.7, 1);
 								}
 
-								&::after {
+								&:after {
 									transform: translate3d(8px, 0, 0) rotate(-45deg) scale(0.7, 1);
 								}
 							}

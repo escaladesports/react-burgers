@@ -11,24 +11,24 @@ class Boring extends React.Component{
 				<style jsx global>{`
 					.BurgerBoring{
 						display: inline-block;
-						& .BurgerInner {
+						.BurgerInner {
 							&,
-							&::before,
-							&::after {
+							&:before,
+							&:after {
 								transition-property: none;
 							}
 						}
 
-						& .BurgerActive {
+						.BurgerActive {
 							.BurgerInner {
 								transform: rotate(45deg);
 
-								&::before {
+								&:before {
 									top: 0;
 									opacity: 0;
 								}
 
-								&::after {
+								&:after {
 									bottom: 0;
 									transform: rotate(-90deg);
 								}

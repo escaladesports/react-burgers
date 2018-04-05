@@ -3,6 +3,7 @@ import ArrowAlt from './arrow-alt'
 import ArrowTurn from './arrow-turn'
 import Boring from './boring'
 import Collapse from './collapse'
+import Elastic from './elastic'
 import Slider from './slider'
 
 export {
@@ -11,5 +12,6 @@ export {
 	ArrowTurn,
 	Boring,
 	Collapse,
+	Elastic,
 	Slider,
 }

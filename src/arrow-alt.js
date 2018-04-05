@@ -16,7 +16,7 @@ class ArrowAlt extends React.Component{
 					.BurgerArrowAlt{
 						display: inline-block;
 
-						& .BurgerInner {
+						.BurgerInner {
 							&:before {
 								transition: top 0.1s 0.1s ease,
 								transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1);
@@ -28,7 +28,7 @@ class ArrowAlt extends React.Component{
 							}
 						}
 
-						& .BurgerActive {
+						.BurgerActive {
 							.BurgerInner {
 								&:before {
 									top: 0;

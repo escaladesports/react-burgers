@@ -20,7 +20,7 @@ class Slider extends React.Component{
 					.BurgerSlider{
 						display: inline-block;
 
-						& .BurgerInner{
+						.BurgerInner{
 							top: ${lineHeight / 2}px;
 
 							&:before{
@@ -35,7 +35,7 @@ class Slider extends React.Component{
 							}
 						}
 
-						& .BurgerActive{
+						.BurgerActive{
 							.BurgerInner{
 								transform: translate3d(0, ${yOffset}px, 0) rotate(45deg);
 
