@@ -1,6 +1,6 @@
 import React from 'react'
 import { render } from 'react-dom'
-import { PerspectiveYReverse as Burger } from '../src/index'
+import { PerspectiveY as Burger } from '../src/index'
 
 const containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
