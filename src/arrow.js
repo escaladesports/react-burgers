@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Arrow extends React.Component{
+export class Arrow extends React.Component{
 	render(){
 		let { width } = this.props
 		return (
@@ -28,5 +28,3 @@ class Arrow extends React.Component{
 }
 
 Arrow.defaultProps = defaultProps
-
-export default Arrow

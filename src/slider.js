@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Slider extends React.Component{
+export class Slider extends React.Component{
 	render(){
 		let {
 			lineHeight,
@@ -57,5 +57,3 @@ class Slider extends React.Component{
 }
 
 Slider.defaultProps = defaultProps
-
-export default Slider

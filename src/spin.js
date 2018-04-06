@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Spin extends React.Component{
+export class Spin extends React.Component{
 	render(){
 		return (
 			<Base className='BurgerSpin' {...this.props}>
@@ -53,5 +53,3 @@ class Spin extends React.Component{
 }
 
 Spin.defaultProps = defaultProps
-
-export default Spin

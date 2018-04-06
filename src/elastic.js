@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Elastic extends React.Component{
+export class Elastic extends React.Component{
 	render() {
 		let {
 			lineHeight,
@@ -57,5 +57,3 @@ class Elastic extends React.Component{
 }
 
 Elastic.defaultProps = defaultProps
-
-export default Elastic

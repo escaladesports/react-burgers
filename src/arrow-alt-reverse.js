@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class ArrowAltReverse extends React.Component{
+export class ArrowAltReverse extends React.Component{
 	render(){
 		let { width } = this.props
 		let widthX = width * .2
@@ -49,5 +49,3 @@ class ArrowAltReverse extends React.Component{
 }
 
 ArrowAltReverse.defaultProps = defaultProps
-
-export default ArrowAltReverse

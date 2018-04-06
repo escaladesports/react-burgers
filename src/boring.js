@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Boring extends React.Component{
+export class Boring extends React.Component{
 	render(){
 		return (
 			<Base className='BurgerBoring' {...this.props}>
@@ -40,5 +40,3 @@ class Boring extends React.Component{
 }
 
 Boring.defaultProps = defaultProps
-
-export default Boring

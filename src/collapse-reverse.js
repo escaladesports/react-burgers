@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-export class Collapse extends React.Component{
+export class CollapseReverse extends React.Component{
 	render(){
 		let {
 			lineHeight,
@@ -11,9 +11,9 @@ export class Collapse extends React.Component{
 		} = this.props
 
 		return (
-			<Base className='BurgerCollapse' {...this.props}>
+			<Base className='BurgerCollapseReverse' {...this.props}>
 				<style jsx global>{`
-					.BurgerCollapse{
+					.BurgerCollapseReverse {
 						.BurgerInner {
 							top: auto;
 							bottom: 0;
@@ -35,7 +35,7 @@ export class Collapse extends React.Component{
 
 						&.BurgerActive {
 							.BurgerInner {
-								transform: translate3d(0, ${(lineSpacing + lineHeight) * -1}px, 0) rotate(-45deg);
+								transform: translate3d(0, ${(lineSpacing + lineHeight) * -1}px, 0) rotate(45deg);
 								transition-delay: 0.22s;
 								transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -48,7 +48,7 @@ export class Collapse extends React.Component{
 
 								&:before {
 									top: 0;
-									transform: rotate(-90deg);
+									transform: rotate(90deg);
 									transition: top 0.1s 0.16s cubic-bezier(0.33333, 0, 0.66667, 0.33333),
 													transform 0.13s 0.25s cubic-bezier(0.215, 0.61, 0.355, 1);
 								}
@@ -61,4 +61,4 @@ export class Collapse extends React.Component{
 	}
 }
 
-Collapse.defaultProps = defaultProps
+CollapseReverse.defaultProps = defaultProps

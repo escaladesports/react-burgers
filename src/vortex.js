@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Vortex extends React.Component{
+export class Vortex extends React.Component{
 	render() {
 		return (
 			<Base className='BurgerVortex' {...this.props}>
@@ -52,5 +52,3 @@ class Vortex extends React.Component{
 }
 
 Vortex.defaultProps = defaultProps
-
-export default Vortex

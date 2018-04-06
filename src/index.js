@@ -1,37 +1,18 @@
-import Arrow from './arrow'
-import ArrowReverse from './arrow-reverse'
-import ArrowAlt from './arrow-alt'
-import ArrowAltReverse from './arrow-alt-reverse'
-import ArrowTurn from './arrow-turn'
-import ArrowTurnReverse from './arrow-turn-reverse'
-import Boring from './boring'
-import Collapse from './collapse'
-import Elastic from './elastic'
-import Emphatic from './emphatic'
-import Minus from './minus'
-import Slider from './slider'
-import Spin from './spin'
-import Spring from './spring'
-import Squeeze from './squeeze'
-import Stand from './stand'
-import Vortex from './vortex'
-
-export {
-	Arrow,
-	ArrowReverse,
-	ArrowAlt,
-	ArrowAltReverse,
-	ArrowTurn,
-	ArrowTurnReverse,
-	Boring,
-	Collapse,
-	Elastic,
-	Emphatic,
-	Minus,
-	Slider,
-	Spin,
-	Spring,
-	Squeeze,
-	Stand,
-	Vortex,
-}
+export { Arrow } from './arrow'
+export { ArrowReverse } from './arrow-reverse'
+export { ArrowAlt } from './arrow-alt'
+export { ArrowAltReverse } from './arrow-alt-reverse'
+export { ArrowTurn } from './arrow-turn'
+export { ArrowTurnReverse } from './arrow-turn-reverse'
+export { Boring } from './boring'
+export { Collapse } from './collapse'
+export { CollapseReverse } from './collapse-reverse'
+export { Elastic } from './elastic'
+export { Emphatic } from './emphatic'
+export { Minus } from './minus'
+export { Slider } from './slider'
+export { Spin } from './spin'
+export { Spring } from './spring'
+export { Squeeze } from './squeeze'
+export { Stand } from './stand'
+export { Vortex } from './vortex'

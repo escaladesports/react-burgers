@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class ArrowTurnReverse extends React.Component{
+export class ArrowTurnReverse extends React.Component{
 	render(){
 		return (
 			<Base className='BurgerArrowTurnReverse' {...this.props}>
@@ -28,5 +28,3 @@ class ArrowTurnReverse extends React.Component{
 }
 
 ArrowTurnReverse.defaultProps = defaultProps
-
-export default ArrowTurnReverse

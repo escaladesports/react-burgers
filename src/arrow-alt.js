@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class ArrowAlt extends React.Component{
+export class ArrowAlt extends React.Component{
 	render(){
 		let { width } = this.props
 
@@ -49,5 +49,3 @@ class ArrowAlt extends React.Component{
 }
 
 ArrowAlt.defaultProps = defaultProps
-
-export default ArrowAlt

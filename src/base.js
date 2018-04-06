@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Base extends React.Component{
+export default class Base extends React.Component{
 	render(){
 		let {
 			width,
@@ -85,5 +85,3 @@ class Base extends React.Component{
 		)
 	}
 }
-
-export default Base

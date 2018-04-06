@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-class Spring extends React.Component{
+export class Spring extends React.Component{
 	render() {
 		let {
 			lineHeight,
@@ -60,5 +60,3 @@ class Spring extends React.Component{
 }
 
 Spring.defaultProps = defaultProps
-
-export default Spring
