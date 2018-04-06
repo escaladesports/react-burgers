@@ -3,7 +3,7 @@ import React from 'react'
 import Base from './base'
 import defaultProps from './default-props'
 
-export class Slider extends React.Component{
+export class SliderReverse extends React.Component{
 	render(){
 		let {
 			lineHeight,
@@ -14,46 +14,41 @@ export class Slider extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base className='BurgerSlider' {...this.props}>
+			<Base className='BurgerSliderReverse' {...this.props}>
 				<style jsx global>{`
-					.BurgerSlider{
-						display: inline-block;
-
-						.BurgerInner{
+					.BurgerSliderReverse{
+						.BurgerInner {
 							top: ${lineHeight / 2}px;
 
-							&:before{
+							&:before {
 								top: ${yOffset}px;
 								transition-property: transform, opacity;
 								transition-timing-function: ease;
 								transition-duration: 0.15s;
 							}
-
-							&:after{
+							&:after {
 								top: ${yOffset * 2}px;
 							}
 						}
 
-						&.BurgerActive{
-							.BurgerInner{
-								transform: translate3d(0, ${yOffset}px, 0) rotate(45deg);
+						&.BurgerActive {
+							.BurgerInner {
+								transform: translate3d(0, ${yOffset}px, 0) rotate(-45deg);
 
-								&:before{
-									transform: rotate(-45deg) translate3d(${width / -7}px, ${lineSpacing * -1}px, 0);
+								&:before {
+									transform: rotate(45deg) translate3d(${width / 7}px, ${lineSpacing * -1}px, 0);
 									opacity: 0;
 								}
-
-								&:after{
-									transform: translate3d(0, ${yOffset * -2}px, 0) rotate(-90deg);
+								&:after {
+									transform: translate3d(0, ${yOffset * -2}px, 0) rotate(90deg);
 								}
 							}
 						}
 					}
-
 				`}</style>
 			</Base>
 		)
 	}
 }
 
-Slider.defaultProps = defaultProps
+SliderReverse.defaultProps = defaultProps
