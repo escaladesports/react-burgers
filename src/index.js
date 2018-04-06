@@ -1,30 +1,63 @@
-export { Arrow } from './arrow'
-export { ArrowReverse } from './arrow-reverse'
-export { ArrowAlt } from './arrow-alt'
-export { ArrowAltReverse } from './arrow-alt-reverse'
-export { ArrowTurn } from './arrow-turn'
-export { ArrowTurnReverse } from './arrow-turn-reverse'
-export { Boring } from './boring'
-export { Collapse } from './collapse'
-export { CollapseReverse } from './collapse-reverse'
-export { Elastic } from './elastic'
-export { ElasticReverse } from './elastic-reverse'
-export { Emphatic } from './emphatic'
-export { Minus } from './minus'
-export { PerspectiveX } from './perspective-x'
-export { PerspectiveXReverse } from './perspective-x-reverse'
-export { PerspectiveY } from './perspective-y'
-export { PerspectiveYReverse } from './perspective-y-reverse'
-export { PerspectiveXY } from './perspective-x-y'
-export { PerspectiveXYReverse } from './perspective-x-y-reverse'
-export { Slider } from './slider'
-export { SliderReverse } from './slider-reverse'
-export { Spin } from './spin'
-export { SpinReverse } from './spin-reverse'
-export { Spring } from './spring'
-export { SpringReverse } from './spring-reverse'
-export { Squeeze } from './squeeze'
-export { Stand } from './stand'
-export { StandReverse } from './stand-reverse'
-export { Vortex } from './vortex'
-export { VortexReverse } from './vortex-reverse'
+import Arrow from './types/arrow'
+import ArrowReverse from './types/arrow-reverse'
+import ArrowAlt from './types/arrow-alt'
+import ArrowAltReverse from './types/arrow-alt-reverse'
+import ArrowTurn from './types/arrow-turn'
+import ArrowTurnReverse from './types/arrow-turn-reverse'
+import Boring from './types/boring'
+import Collapse from './types/collapse'
+import CollapseReverse from './types/collapse-reverse'
+import Elastic from './types/elastic'
+import ElasticReverse from './types/elastic-reverse'
+import Emphatic from './types/emphatic'
+import Minus from './types/minus'
+import PerspectiveX from './types/perspective-x'
+import PerspectiveXReverse from './types/perspective-x-reverse'
+import PerspectiveY from './types/perspective-y'
+import PerspectiveYReverse from './types/perspective-y-reverse'
+import PerspectiveXY from './types/perspective-x-y'
+import PerspectiveXYReverse from './types/perspective-x-y-reverse'
+import Slider from './types/slider'
+import SliderReverse from './types/slider-reverse'
+import Spin from './types/spin'
+import SpinReverse from './types/spin-reverse'
+import Spring from './types/spring'
+import SpringReverse from './types/spring-reverse'
+import Squeeze from './types/squeeze'
+import Stand from './types/stand'
+import StandReverse from './types/stand-reverse'
+import Vortex from './types/vortex'
+import VortexReverse from './types/vortex-reverse'
+
+module.exports = {
+	Arrow,
+	ArrowReverse,
+	ArrowAlt,
+	ArrowAltReverse,
+	ArrowTurn,
+	ArrowTurnReverse,
+	Boring,
+	Collapse,
+	CollapseReverse,
+	Elastic,
+	ElasticReverse,
+	Emphatic,
+	Minus,
+	PerspectiveX,
+	PerspectiveXReverse,
+	PerspectiveY,
+	PerspectiveYReverse,
+	PerspectiveXY,
+	PerspectiveXYReverse,
+	Slider,
+	SliderReverse,
+	Spin,
+	SpinReverse,
+	Spring,
+	SpringReverse,
+	Squeeze,
+	Stand,
+	StandReverse,
+	Vortex,
+	VortexReverse,
+}

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class ElasticReverse extends React.Component{
+export default class Elastic extends React.Component{
 	render() {
 		let {
 			lineHeight,
@@ -13,11 +13,11 @@ export class ElasticReverse extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base className='BurgerElasticReverse' {...this.props}>
+			<Base className='BurgerElastic' {...this.props}>
 				<style jsx global>{`
-					.BurgerElasticReverse {
+					.BurgerElastic {
 						.BurgerInner {
-							top: lineHeight / 2;
+							top: ${lineHeight / 2}px;
 							transition-duration: 0.275s;
 							transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
@@ -34,7 +34,8 @@ export class ElasticReverse extends React.Component{
 
 						&.BurgerActive {
 							.BurgerInner {
-								transform: translate3d(0, ${yOffset}px, 0) rotate(-135deg);
+
+								transform: translate3d(0, ${yOffset}px, 0) rotate(135deg);
 								transition-delay: 0.075s;
 
 								&:before {
@@ -43,7 +44,7 @@ export class ElasticReverse extends React.Component{
 								}
 
 								&:after {
-									transform: translate3d(0, ${yOffset * -2}px, 0) rotate(270deg);
+									transform: translate3d(0, ${yOffset * -2}px, 0) rotate(-270deg);
 									transition-delay: 0.075s;
 								}
 							}
@@ -55,4 +56,4 @@ export class ElasticReverse extends React.Component{
 	}
 }
 
-ElasticReverse.defaultProps = defaultProps
+Elastic.defaultProps = defaultProps

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class PerspectiveXY extends React.Component{
+export default class PerspectiveXY extends React.Component{
 	render() {
 		let {
 			width,

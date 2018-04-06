@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class PerspectiveXYReverse extends React.Component{
+export default class PerspectiveY extends React.Component{
 	render() {
 		let {
 			width,
@@ -12,10 +12,10 @@ export class PerspectiveXYReverse extends React.Component{
 		} = this.props
 		let offset = lineHeight + lineSpacing
 		return (
-			<Base className='BurgerPerspectiveXYReverse' {...this.props}>
+			<Base className='BurgerPerspectiveY' {...this.props}>
 				<style jsx global>{`
-					.BurgerPerspectiveXYReverse{
-						.BurgerBox{
+					.BurgerPerspectiveY {
+						.BurgerBox {
 							perspective: ${width * 2}px;
 						}
 
@@ -32,11 +32,12 @@ export class PerspectiveXYReverse extends React.Component{
 						&.BurgerActive {
 							.BurgerInner {
 								background-color: transparent;
-								transform: rotateX(180deg) rotateY(180deg) rotateZ(-180deg);
+								transform: rotateX(-180deg);
 
 								&:before {
 									transform: translate3d(0, ${offset}px, 0) rotate(45deg);
 								}
+
 								&:after {
 									transform: translate3d(0, ${offset * -1}px, 0) rotate(-45deg);
 								}
@@ -49,4 +50,4 @@ export class PerspectiveXYReverse extends React.Component{
 	}
 }
 
-PerspectiveXYReverse.defaultProps = defaultProps
+PerspectiveY.defaultProps = defaultProps

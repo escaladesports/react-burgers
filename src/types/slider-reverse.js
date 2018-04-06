@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class SliderReverse extends React.Component{
+export default class SliderReverse extends React.Component{
 	render(){
 		let {
 			lineHeight,

@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class Collapse extends React.Component{
+export default class Collapse extends React.Component{
 	render(){
 		let {
 			lineHeight,

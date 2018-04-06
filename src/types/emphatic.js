@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class Emphatic extends React.Component{
+export default class Emphatic extends React.Component{
 	render() {
 		let {
 			lineHeight,

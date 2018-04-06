@@ -1,18 +1,17 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class VortexReverse extends React.Component{
+export default class Vortex extends React.Component{
 	render() {
 		return (
-			<Base className='BurgerVortexReverse' {...this.props}>
+			<Base className='BurgerVortex' {...this.props}>
 				<style jsx global>{`
-					.BurgerVortexReverse{
-						.BurgerInner{
+					.BurgerVortex{
+						.BurgerInner {
 							transition-duration: 0.2s;
 							transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-
 							&:before,
 							&:after {
 								transition-duration: 0s;
@@ -29,9 +28,8 @@ export class VortexReverse extends React.Component{
 
 						&.BurgerActive {
 							.BurgerInner {
-								transform: rotate(-765deg);
+								transform: rotate(765deg);
 								transition-timing-function: cubic-bezier(0.19, 1, 0.22, 1);
-
 								&:before,
 								&:after {
 									transition-delay: 0s;
@@ -42,7 +40,7 @@ export class VortexReverse extends React.Component{
 								}
 								&:after {
 									bottom: 0;
-									transform: rotate(-90deg);
+									transform: rotate(90deg);
 								}
 							}
 						}
@@ -53,4 +51,4 @@ export class VortexReverse extends React.Component{
 	}
 }
 
-VortexReverse.defaultProps = defaultProps
+Vortex.defaultProps = defaultProps

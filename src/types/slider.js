@@ -1,9 +1,9 @@
 import React from 'react'
 
-import Base from './base'
-import defaultProps from './default-props'
+import Base from '../base'
+import defaultProps from '../default-props'
 
-export class Slider extends React.Component{
+export default class Slider extends React.Component{
 	render(){
 		let {
 			lineHeight,
