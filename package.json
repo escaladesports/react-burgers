@@ -22,15 +22,15 @@
     "analyze": "esca-scripts analyze --react --component --input ./src/index.js",
     "build": "esca-scripts build --react --component --babel --input src --output dist --multiple --styledJsx",
     "dev": "esca-scripts dev --input './dev/dev.js, ./dev/index.html' --react --browser --styledJsx",
-	 "buildDev": "esca-scripts build --react --browser --styledJsx --input './dev/dev.js' --output './dist-dev/dev.js' && cp './dev/index.html' './dist-dev/index.html' && echo \"<script src='./dev.js'></script>\" >> './dist-dev/index.html'",
-	 "netlify": "opn https://app.netlify.com/sites/react-burgers/deploys",
+    "buildDev": "esca-scripts build --react --browser --styledJsx --input './dev/dev.js' --output './dist-dev/dev.js' && cp './dev/index.html' './dist-dev/index.html' && echo \"<script src='./dev.js'></script>\" >> './dist-dev/index.html'",
+    "netlify": "opn https://app.netlify.com/sites/react-burgers/deploys",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
     "test": "echo 'no test'",
     "travis": "opn https://travis-ci.org/escaladesports/react-burgers/branches"
   },
   "devDependencies": {
-    "esca-scripts": "^0.14.11",
+    "esca-scripts": "^0.14.12",
     "opn-cli": "^3.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",

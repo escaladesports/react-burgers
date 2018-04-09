@@ -2134,9 +2134,9 @@ es6-weak-map@^2.0.1:
     es6-iterator "^2.0.1"
     es6-symbol "^3.1.1"
 
-esca-scripts@^0.14.11:
-  version "0.14.11"
-  resolved "https://registry.yarnpkg.com/esca-scripts/-/esca-scripts-0.14.11.tgz#8b4ccfa019c8daa9fdff75782421e4599370158d"
+esca-scripts@^0.14.12:
+  version "0.14.12"
+  resolved "https://registry.yarnpkg.com/esca-scripts/-/esca-scripts-0.14.12.tgz#e6047de53ff9cba494f8dcb44b1dff3846ea0b61"
   dependencies:
     babel-cli "^6.26.0"
     babel-core "^6.26.0"
