@@ -1,9 +1,11 @@
 import React from 'react'
 import { render } from 'react-dom'
+import SyntaxHighlighter from 'react-syntax-highlighter'
+import { docco } from 'react-syntax-highlighter/styles/hljs'
+
 import Template from './template'
 import Burger from '../src/index'
-
-console.log(Burger)
+import defaultProps from '../src/default-props'
 
 const containerEl = document.createElement('div')
 document.body.appendChild(containerEl)
@@ -12,42 +14,94 @@ class BurgerToggle extends React.Component{
 	constructor(props){
 		super(props)
 		this.state = {
-			active: false,
 			type: 'Slider',
-		}
-		this.typeChange = this.typeChange.bind(this)
-	}
-	typeChange(){
+			...defaultProps,
 
+		}
+		this.changeProp = this.changeProp.bind(this)
+	}
+	changeProp(e){
+		let val = e.target.value
+		if(e.target.type === 'number'){
+			val = Number(val)
+		}
+		this.setState({
+			[e.target.name]: val,
+			active: false,
+		})
 	}
 	render(){
 		const CurBurger = Burger[this.state.type]
+		const props = []
+		for(let i in defaultProps){
+			if(this.state[i] !== defaultProps[i]){
+				let str = `${i}=`
+				if(typeof this.state[i] === 'string'){
+					str += `'${this.state[i]}'`
+				}
+				else{
+					str += `{${this.state[i]}}`
+				}
+				props.push(str)
+			}
+		}
+
 		return(
 			<section>
 				<label>
 					<span>Type:</span>
-					<select onChange={this.typeChange}>
+					<select
+						name='type'
+						onChange={this.changeProp}
+						value={this.state.type}>
 						{Object.keys(Burger).map(opt => (
-							<option>{opt}</option>
+							<option key={`opt-${opt}`}>{opt}</option>
 						))}
 					</select>
 				</label>
+				{Object.keys(defaultProps).map(name => {
+					if(name === 'active') return null
+					let val = defaultProps[name]
+					return (
+						<label key={`label-${name}`}>
+							<span>{name}</span>
+							<input
+								type={typeof val}
+								name={name}
+								value={this.state[name]}
+								onChange={this.changeProp}
+							/>
+						</label>
+					)
+				})}
 				<div className='buttonCont'>
 					<CurBurger
-						active={this.state.active}
+						{...this.state}
 						onClick={() => this.setState({ active: !this.state.active })}
 					/>
+				</div>
+				<div className='code'>
+					<SyntaxHighlighter language='jsx' style={docco}>{`import { ${this.state.type} } from 'react-burgers'
+
+...
+
+<${this.state.type}${props.length ? '\n   ' + props.join('\n   ') : ''} />`}</SyntaxHighlighter>
 				</div>
 				<style jsx>{`
 					.buttonCont{
 						text-align: center;
-						margin-top: 30px;
+						margin-top: 23px;
 					}
 					label{
+						display: block;
+						margin-bottom: 7px;
 						span{
 							display: inline-block;
-							width: 60px;
+							width: 110px;
 						}
+					}
+					select, input{
+						width: 150px;
 					}
 				`}</style>
 			</section>

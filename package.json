@@ -3,13 +3,13 @@
   "version": "0.0.0",
   "keywords": [
     "react",
-	 "burgers",
-	 "hamburger",
-	 "menu",
-	 "nav",
-	 "navigation",
-	 "animated",
-	 "css"
+    "burgers",
+    "hamburger",
+    "menu",
+    "nav",
+    "navigation",
+    "animated",
+    "css"
   ],
   "main": "dist/index.js",
   "author": "Kennedy Rose <krose@escaladesports.com>",
@@ -31,7 +31,8 @@
     "esca-scripts": "^0.14.8",
     "opn-cli": "^3.1.0",
     "react": "^16.1.1",
-    "react-dom": "^16.1.1"
+    "react-dom": "^16.1.1",
+    "react-syntax-highlighter": "^7.0.2"
   },
   "dependencies": {
     "styled-jsx": "^2.2.6"
