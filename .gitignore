@@ -18,6 +18,7 @@ static
 docs/build/
 dist-es6/
 dist-es5/
+dist-dev/
 dist-modules/
 coverage/
 .eslintcache
