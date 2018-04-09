@@ -16,7 +16,7 @@ export default class Spring extends React.Component{
 				<style jsx global>{`
 					.BurgerSpring{
 						.BurgerInner {
-							top: ${lineHeight / 2};
+							top: ${lineHeight / 2}px;
 							transition: background-color 0s 0.13s linear;
 
 							&:before {
