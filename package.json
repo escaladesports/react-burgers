@@ -32,7 +32,8 @@
     "opn-cli": "^3.1.0",
     "react": "^16.1.1",
     "react-dom": "^16.1.1",
-    "react-syntax-highlighter": "^7.0.2"
+    "react-syntax-highlighter": "^7.0.2",
+    "title-case": "^2.1.1"
   },
   "dependencies": {
     "styled-jsx": "^2.2.6"

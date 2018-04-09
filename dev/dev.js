@@ -2,6 +2,7 @@ import React from 'react'
 import { render } from 'react-dom'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { docco } from 'react-syntax-highlighter/styles/hljs'
+import titleCase from 'title-case'
 
 import Template from './template'
 import Burger from '../src/index'
@@ -64,7 +65,7 @@ class BurgerToggle extends React.Component{
 					let val = defaultProps[name]
 					return (
 						<label key={`label-${name}`}>
-							<span>{name}</span>
+							<span>{titleCase(name)}:</span>
 							<input
 								type={typeof val}
 								name={name}
@@ -97,11 +98,17 @@ class BurgerToggle extends React.Component{
 						margin-bottom: 7px;
 						span{
 							display: inline-block;
-							width: 110px;
+							width: 130px;
+							text-align: right;
+							padding-right: 10px;
+							font-size: .9em;
 						}
 					}
 					select, input{
-						width: 150px;
+						width: 120px;
+					}
+					.code{
+						text-align: left;
 					}
 				`}</style>
 			</section>

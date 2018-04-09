@@ -10,9 +10,10 @@ class Template extends React.Component{
 				{this.props.children}
 				<style jsx>{`
 					main{
-						max-width: 800px;
+						max-width: 500px;
 						padding: 30px;
 						margin: auto;
+						text-align: center;
 					}
 					small{
 						display: block;
