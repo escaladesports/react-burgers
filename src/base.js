@@ -1,6 +1,9 @@
 import React from 'react'
 
-export default class Base extends React.Component{
+export default class Base extends React.Component {
+	formattedSize(size) {
+		return isNaN(parseInt(size)) ? size : `${size}px`
+	}
 	render(){
 		let {
 			width,
@@ -15,9 +18,9 @@ export default class Base extends React.Component{
 			children,
 		} = this.props
 
-		const height = lineSpacing * 2 + lineHeight * 3;
-		const widthWithPx = this.getSizeWithPx(width);
-		const heightWithPx = this.getSizeWithPx(height);
+		const height = lineSpacing * 2 + lineHeight * 3
+		const formattedWidth = this.formattedSize(width)
+		const formattedHeight = this.formattedSize(height)
 
 		const classes = ['Burger']
 		if(active) classes.push('BurgerActive')
@@ -45,8 +48,8 @@ export default class Base extends React.Component{
 					}
 
 					.BurgerBox{
-						width: ${width};
-						height: ${height};
+						width: ${formattedWidth};
+						height: ${formattedHeight};
 						display: inline-block;
 						position: relative;
 					}
@@ -85,8 +88,5 @@ export default class Base extends React.Component{
 				`}</style>
 			</button>
 		)
-	}
-	getSizeWithPx = (size) => {
-		isNaN(parseInt(size)) ? size : `${size}px`;
 	}
 }
