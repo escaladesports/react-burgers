@@ -43,8 +43,8 @@ export default class Base extends React.Component{
 					}
 
 					.BurgerBox{
-						width: ${width}px;
-						height: ${height}px;
+						width: ${width};
+						height: ${height};
 						display: inline-block;
 						position: relative;
 					}
