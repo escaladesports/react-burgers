@@ -15,7 +15,9 @@ export default class Base extends React.Component{
 			children,
 		} = this.props
 
-		const height = lineSpacing * 2 + lineHeight * 3
+		const height = lineSpacing * 2 + lineHeight * 3;
+		const widthWithPx = this.getSizeWithPx(width);
+		const heightWithPx = this.getSizeWithPx(height);
 
 		const classes = ['Burger']
 		if(active) classes.push('BurgerActive')
@@ -43,8 +45,8 @@ export default class Base extends React.Component{
 					}
 
 					.BurgerBox{
-						width: ${width}px;
-						height: ${height}px;
+						width: ${width};
+						height: ${height};
 						display: inline-block;
 						position: relative;
 					}
@@ -83,5 +85,8 @@ export default class Base extends React.Component{
 				`}</style>
 			</button>
 		)
+	}
+	getSizeWithPx = (size) => {
+		isNaN(parseInt(size)) ? size : `${size}px`;
 	}
 }
