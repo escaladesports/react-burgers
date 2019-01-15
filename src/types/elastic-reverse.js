@@ -13,7 +13,7 @@ export default class ElasticReverse extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base className='BurgerElasticReverse' {...this.props}>
+			<Base typeClassName='BurgerElasticReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerElasticReverse {
 						.BurgerInner {

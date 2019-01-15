@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class Stand extends React.Component{
 	render() {
 		return (
-			<Base className='BurgerStand' {...this.props}>
+			<Base typeClassName='BurgerStand' {...this.props}>
 				<style jsx global>{`
 					.BurgerStand {
 						.BurgerInner {

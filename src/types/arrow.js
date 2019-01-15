@@ -7,7 +7,7 @@ export default class Arrow extends React.Component{
 	render(){
 		let { width } = this.props
 		return (
-			<Base className='BurgerArrow' {...this.props}>
+			<Base typeClassName='BurgerArrow' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrow{
 						&.BurgerActive{

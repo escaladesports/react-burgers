@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class VortexReverse extends React.Component{
 	render() {
 		return (
-			<Base className='BurgerVortexReverse' {...this.props}>
+			<Base typeClassName='BurgerVortexReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerVortexReverse{
 						.BurgerInner{

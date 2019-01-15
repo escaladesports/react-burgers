@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class Vortex extends React.Component{
 	render() {
 		return (
-			<Base className='BurgerVortex' {...this.props}>
+			<Base typeClassName='BurgerVortex' {...this.props}>
 				<style jsx global>{`
 					.BurgerVortex{
 						.BurgerInner {

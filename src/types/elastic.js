@@ -13,7 +13,7 @@ export default class Elastic extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base className='BurgerElastic' {...this.props}>
+			<Base typeClassName='BurgerElastic' {...this.props}>
 				<style jsx global>{`
 					.BurgerElastic {
 						.BurgerInner {

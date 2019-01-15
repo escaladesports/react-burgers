@@ -16,7 +16,7 @@ export default class Emphatic extends React.Component{
 		let negativeDoubleWidth = doubleWidth * -1
 
 		return (
-			<Base className='BurgerEmphatic' {...this.props}>
+			<Base typeClassName='BurgerEmphatic' {...this.props}>
 				<style jsx global>{`
 					.BurgerEmphatic {
 						overflow: hidden;

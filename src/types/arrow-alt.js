@@ -8,7 +8,7 @@ export default class ArrowAlt extends React.Component{
 		let { width } = this.props
 
 		return (
-			<Base className='BurgerArrowAlt' {...this.props}>
+			<Base typeClassName='BurgerArrowAlt' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrowAlt{
 

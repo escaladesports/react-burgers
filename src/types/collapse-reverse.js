@@ -11,7 +11,7 @@ export default class CollapseReverse extends React.Component{
 		} = this.props
 
 		return (
-			<Base className='BurgerCollapseReverse' {...this.props}>
+			<Base typeClassName='BurgerCollapseReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerCollapseReverse {
 						.BurgerInner {

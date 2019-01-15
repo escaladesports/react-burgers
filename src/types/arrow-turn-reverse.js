@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class ArrowTurnReverse extends React.Component{
 	render(){
 		return (
-			<Base className='BurgerArrowTurnReverse' {...this.props}>
+			<Base typeClassName='BurgerArrowTurnReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrowTurnReverse{
 						&.BurgerActive{

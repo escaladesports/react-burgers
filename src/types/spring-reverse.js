@@ -12,7 +12,7 @@ export default class SpringReverse extends React.Component{
 		let top = lineHeight + lineSpacing
 
 		return (
-			<Base className='BurgerSpringReverse' {...this.props}>
+			<Base typeClassName='BurgerSpringReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerSpringReverse{
 						.BurgerInner{

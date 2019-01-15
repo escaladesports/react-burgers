@@ -9,7 +9,7 @@ export default class ArrowAltReverse extends React.Component{
 		let widthX = width * .2
 		let widthY = width * .25
 		return (
-			<Base className='BurgerArrowAltReverse' {...this.props}>
+			<Base typeClassName='BurgerArrowAltReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrowAltReverse{
 						.BurgerInner{

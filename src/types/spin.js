@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class Spin extends React.Component{
 	render(){
 		return (
-			<Base className='BurgerSpin' {...this.props}>
+			<Base typeClassName='BurgerSpin' {...this.props}>
 				<style jsx global>{`
 					.BurgerSpin {
 						.BurgerInner {

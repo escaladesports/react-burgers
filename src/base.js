@@ -15,6 +15,7 @@ export default class Base extends React.Component {
 			lineSpacing,
 			padding,
 			className,
+			typeClassName,
 			children,
 		} = this.props
 
@@ -22,7 +23,7 @@ export default class Base extends React.Component {
 		const formattedWidth = this.formattedSize(width)
 		const formattedHeight = this.formattedSize(height)
 
-		const classes = ['Burger']
+		const classes = [typeClassName, 'Burger']
 		if(active) classes.push('BurgerActive')
 		if(className) classes.push(className)
 
