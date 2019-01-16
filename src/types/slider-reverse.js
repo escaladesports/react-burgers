@@ -14,7 +14,7 @@ export default class SliderReverse extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base className='BurgerSliderReverse' {...this.props}>
+			<Base typeClassName='BurgerSliderReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerSliderReverse{
 						.BurgerInner {

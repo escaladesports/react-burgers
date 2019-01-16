@@ -7,7 +7,7 @@ export default class ArrowReverse extends React.Component{
 	render(){
 		let width = this.props.width * .2
 		return (
-			<Base className='BurgerArrowReverse' {...this.props}>
+			<Base typeClassName='BurgerArrowReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerArrowReverse{
 						&.BurgerActive{

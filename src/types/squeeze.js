@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class Squeeze extends React.Component{
 	render() {
 		return (
-			<Base className='BurgerSqueeze' {...this.props}>
+			<Base typeClassName='BurgerSqueeze' {...this.props}>
 				<style jsx global>{`
 					.BurgerSqueeze {
 						.BurgerInner {

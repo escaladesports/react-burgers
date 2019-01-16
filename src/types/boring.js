@@ -6,7 +6,7 @@ import defaultProps from '../default-props'
 export default class Boring extends React.Component{
 	render(){
 		return (
-			<Base className='BurgerBoring' {...this.props}>
+			<Base typeClassName='BurgerBoring' {...this.props}>
 				<style jsx global>{`
 					.BurgerBoring{
 						.BurgerInner {

@@ -12,7 +12,7 @@ export default class PerspectiveY extends React.Component{
 		} = this.props
 		let offset = lineHeight + lineSpacing
 		return (
-			<Base className='BurgerPerspectiveY' {...this.props}>
+			<Base typeClassName='BurgerPerspectiveY' {...this.props}>
 				<style jsx global>{`
 					.BurgerPerspectiveY {
 						.BurgerBox {

@@ -1,6 +1,6 @@
 {
-  "name": "react-burgers",
-  "version": "1.1.1",
+  "name": "react-burgers-classname",
+  "version": "1.0.0",
   "keywords": [
     "react",
     "burgers",
@@ -12,10 +12,10 @@
     "css"
   ],
   "main": "dist/index.js",
-  "author": "Kennedy Rose <krose@escaladesports.com>",
+  "author": "WEB-hart <www.web-hart.com>",
   "repository": {
     "type": "git",
-    "url": "https://github.com/escaladesports/react-burgers.git"
+    "url": "git+https://github.com/riencoertjens/react-burgers.git"
   },
   "license": "MIT",
   "scripts": {
@@ -23,11 +23,9 @@
     "build": "esca-scripts build --react --component --babel --input src --output dist --multiple --styledJsx",
     "dev": "esca-scripts dev --input './dev/dev.js, ./dev/index.html' --react --browser --styledJsx",
     "buildDev": "esca-scripts build --react --browser --styledJsx --input './dev/dev.js' --output './dist-dev/dev.js' && cp './dev/index.html' './dist-dev/index.html' && echo \"<script src='./dev.js'></script>\" >> './dist-dev/index.html'",
-    "netlify": "opn https://app.netlify.com/sites/react-burgers/deploys",
     "prepublishOnly": "npm run build",
     "reset": "esca-scripts reset",
-    "test": "echo 'no test'",
-    "travis": "opn https://travis-ci.org/escaladesports/react-burgers/branches"
+    "test": "echo 'no test'"
   },
   "peerDependencies": {
     "styled-jsx": "2.x"
@@ -42,5 +40,10 @@
   },
   "dependencies": {
     "styled-jsx": "^2.2.6"
-  }
+  },
+  "description": "fork of: [https://react-burgers.netlify.com/](https://react-burgers.netlify.com/) with added support for own className",
+  "bugs": {
+    "url": "https://github.com/riencoertjens/react-burgers/issues"
+  },
+  "homepage": "https://github.com/riencoertjens/react-burgers#readme"
 }

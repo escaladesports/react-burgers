@@ -11,7 +11,7 @@ export default class Collapse extends React.Component{
 		} = this.props
 
 		return (
-			<Base className='BurgerCollapse' {...this.props}>
+			<Base typeClassName='BurgerCollapse' {...this.props}>
 				<style jsx global>{`
 					.BurgerCollapse{
 						.BurgerInner {

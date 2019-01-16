@@ -12,7 +12,7 @@ export default class Spring extends React.Component{
 		let top = lineHeight + lineSpacing
 
 		return (
-			<Base className='BurgerSpring' {...this.props}>
+			<Base typeClassName='BurgerSpring' {...this.props}>
 				<style jsx global>{`
 					.BurgerSpring{
 						.BurgerInner {

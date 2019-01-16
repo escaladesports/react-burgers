@@ -14,7 +14,7 @@ export default class Slider extends React.Component{
 		let yOffset = lineSpacing + lineHeight
 
 		return (
-			<Base className='BurgerSlider' {...this.props}>
+			<Base typeClassName='BurgerSlider' {...this.props}>
 				<style jsx global>{`
 					.BurgerSlider{
 						display: inline-block;

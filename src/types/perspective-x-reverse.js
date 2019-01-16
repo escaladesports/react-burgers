@@ -12,7 +12,7 @@ export default class PerspectiveXReverse extends React.Component {
 		} = this.props
 		let offset = lineHeight + lineSpacing
 		return (
-			<Base className='BurgerPerspectiveXReverse' {...this.props}>
+			<Base typeClassName='BurgerPerspectiveXReverse' {...this.props}>
 				<style jsx global>{`
 					.BurgerPerspectiveXReverse{
 						.BurgerBox{
