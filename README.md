@@ -71,3 +71,4 @@ lineSpacing | `6`
 color | `"#000"`
 borderRadius | `0`
 padding | `"15px"`
+active | false
