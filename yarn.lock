@@ -4285,8 +4285,8 @@ path-type@^3.0.0:
     pify "^3.0.0"
 
 pathval@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.0.tgz#b942e6d4bde653005ef6b71361def8727d0645e0"
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz#8534e77a77ce7ac5a2512ea21e0fdb8fcf6c3d8d"
 
 pause-stream@0.0.11:
   version "0.0.11"
@@ -5269,8 +5269,9 @@ static-extend@^0.1.1:
     define-property "^0.2.5"
     object-copy "^0.1.0"
 
-"static-server@github:escaladesports/static-server":
+static-server@escaladesports/static-server:
   version "3.0.0"
+  uid cba4e0a7d56129badeb55963a2414c88531ca8bb
   resolved "https://codeload.github.com/escaladesports/static-server/tar.gz/cba4e0a7d56129badeb55963a2414c88531ca8bb"
   dependencies:
     chalk "^0.5.1"
